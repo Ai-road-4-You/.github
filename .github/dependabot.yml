@@ -4,3 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # enterprise-ci-cd is private and Dependabot cannot read it (the whole update job failed);
+    # callers use the floating @v1 tag, so it needs no Dependabot bumps.
+    ignore:
+      - dependency-name: Ai-road-4-You/enterprise-ci-cd*
